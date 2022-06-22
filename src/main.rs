@@ -31,7 +31,7 @@ impl std::fmt::Display for MarkDownFiles {
 }
 impl HtmlPage {
     fn new() -> Self {
-        return HtmlPage {
+        HtmlPage {
             head: r#"<!DOCTYPE html>
 <html lang="en">
         <head>
@@ -44,7 +44,7 @@ impl HtmlPage {
             body_open: r#"<body>"#.to_string(),
             body_closer: r#"</body>"#.to_string(),
             footer: r#"</html>"#.to_string(),
-        };
+        }
     }
     fn add_to_body(mut self, html_items: String) -> Self {
         self.body_open = self.body_open.to_owned() + &html_items;
